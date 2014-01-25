@@ -1,0 +1,8 @@
+name    'desalvo-corosync'
+version '0.1.0'
+source 'https://github.com/desalvo/puppet-corosync'
+author 'desalvo'
+license 'Apache License, Version 2.0'
+summary 'Puppet module for corosync management'
+description 'A puppet module for managing corosync configuration'
+project_page 'https://github.com/desalvo/puppet-corosync'
