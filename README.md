@@ -16,13 +16,17 @@ Usage
 -----
 
 Parameters:
+
+* **authkey**: the authentication key
 * **bindnetaddr**: the IP to bind the servies to
 * **broadcast**: set this to true if you want to use broadcast instead of multicast
+* **cluster_name**: The cluster name
 * **mcastaddr**: the multicast address, if using multicast
 * **mcastport**: the multicast port of the cluster
-* **pacemaker**: set this to the value of the pacemaker protocol, if you want to automatically start pacemaker
+* **nodes**: The cluster members
+* **pacemaker_version**: Set this to the value of the pacemaker protocol. Default is 0.
 * **secauth**: enable or disable secure authentication (default false)
-* **authkey**: the authentication key
+* **unicast**: Set this to true if you want to use unicast communications
 
 **Sample usage**
 
@@ -44,6 +48,14 @@ Contributors
 
 Release Notes
 -------------
+
+**0.1.1**
+
+* New parameters
+* **cluster_name**
+* **unicast**
+* **nodes**
+* **pacemaker_version**
 
 **0.1.0**
 

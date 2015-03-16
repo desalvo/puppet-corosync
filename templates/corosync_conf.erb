@@ -3,6 +3,7 @@ compatibility: whitetank
 
 totem {
         version: 2
+        cluster_name: <%= @cluster_name %>
         secauth: <%= @secauth_value %>
         threads: 0
         interface {
@@ -10,9 +11,29 @@ totem {
                 bindnetaddr: <%= @bindnetaddr %>
                 <%if @broadcast %>broadcast: yes<% else %>mcastaddr: <%= @mcastaddr %><% end %>
                 mcastport: <%= @mcastport %>
+                ttl: 1
         }
+        <%if @unicast -%>transport: udpu<% end %>
 }
 
+<% if @nodes -%>
+nodelist {
+<% @nodes.each do |node| -%>
+        node {
+                ring0_addr: <%= node["addr"] %>
+                nodeid: <%= node["id"] %>
+        }
+<% end -%>
+}
+
+quorum {
+        provider: corosync_votequorum
+<% if @two_node -%>
+        two_node: 1
+<% end -%>
+}
+
+<% end -%>
 logging {
         fileline: off
         to_stderr: no

@@ -8,6 +8,7 @@ class corosync::params {
       $corosync_service_dir = '/etc/corosync/service.d' 
       $corosync_pacemaker = "${corosync_service_dir}/pacemaker"
       $corosync_authkey = '/etc/corosync/authkey'
+      $pacemaker_service = 'pacemaker'
     }
     default:   {
     }
