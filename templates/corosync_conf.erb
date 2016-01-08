@@ -6,13 +6,20 @@ totem {
         cluster_name: <%= @cluster_name %>
         secauth: <%= @secauth_value %>
         threads: 0
+<% if @bindnetaddr -%>
         interface {
                 ringnumber: 0
                 bindnetaddr: <%= @bindnetaddr %>
-                <%if @broadcast %>broadcast: yes<% else %>mcastaddr: <%= @mcastaddr %><% end %>
+<%if @broadcast -%>
+                broadcast: yes
+<% end -%>
+<%if @mcastaddr -%>
+                mcastaddr: <%= @mcastaddr %>
+<% end -%>
                 mcastport: <%= @mcastport %>
                 ttl: 1
         }
+<% end -%>
         <%if @unicast -%>transport: udpu<% end %>
 }
 

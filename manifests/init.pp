@@ -108,7 +108,7 @@ class corosync (
         ensure     => running,
         enable     => true,
         hasrestart => true,
-        require    => [Package[$corosync::params::corosync_packages],File[$corosync::params::corosync_pacemaker]]
+        require    => [Package[$corosync::params::corosync_packages],File[$corosync::params::corosync_pacemaker],Service[$corosync::params::corosync_service]]
       }
     }
 

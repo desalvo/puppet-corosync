@@ -1,0 +1,15 @@
+{
+  "name": "desalvo-corosync",
+  "version": "0.1.2",
+  "author": "desalvo",
+  "summary": "Puppet module for corosync management",
+  "license": "Apache 2.0",
+  "source": "https://github.com/desalvo/puppet-corosync",
+  "project_page": "https://github.com/desalvo/puppet-corosync",
+  "issues_url": "https://github.com/desalvo/puppet-corosync/issues",
+  "description": "A puppet module for managing corosync configuration",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.0.0"}
+  ]
+}
+

@@ -49,6 +49,10 @@ Contributors
 Release Notes
 -------------
 
+**0.1.2**
+
+* Fix templates
+
 **0.1.1**
 
 * New parameters
